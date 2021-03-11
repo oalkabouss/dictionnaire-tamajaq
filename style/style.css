@@ -11,6 +11,8 @@
   --bg-color: #f4f4f4;
   --text-color: #686868;
   --text-detail-color: #666666;
+  --bg-card:#fff;
+  --red-color:#F44336;
 }
 
 body {
@@ -33,7 +35,7 @@ body {
 }
 
 .head > h2 {
-  color: #ffffff;
+  color: var(--bg-card);
 }
 
 input[type="text"] {
@@ -41,7 +43,7 @@ input[type="text"] {
   box-sizing: border-box;
   border: none;
   border-radius: 4px;
-  background-color: #ffffff;
+  background-color: var(--bg-card);
   background-image: url("/style/icons/loup.png");
   background-position: 10px 10px;
   background-repeat: no-repeat;
@@ -71,9 +73,9 @@ input[type="text"]:focus {
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
-  background-color: #fff;
+  background-color: var(--bg-card);
   width: 95%;
-  height: 80px;
+  min-height: 80px;
   position: relative;
 }
 
@@ -91,10 +93,35 @@ spam{
   font-size: 24px;
   line-height: 28px;
 }
+.word::first-letter {
+  color: var( --text-color);
+  text-transform: uppercase;
+}
 
 .description {
   margin-top: 10px;
   color: var(--text-detail-color);
   font-size: 18px;
   line-height: 21px;
+}
+
+.description::first-letter {
+  color: var(--red-color);
+  text-transform: uppercase;
+}
+
+.variant{
+  margin-top: 5px;
+  font-style: italic;
+  font-size: 12;
+  color: var( --text-color);
+}
+
+card-item{
+  z-index: -1;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
 }
